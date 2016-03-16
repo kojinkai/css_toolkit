@@ -1,0 +1,70 @@
+/* ==========================================================================
+  Clearfix: Our ubiquitous clearfix https://github.com/h5bp/html5-boilerplate
+========================================================================== */
+@mixin clearfix {
+  
+  &:before, 
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+  /* * For IE 6/7 only * Include this rule to trigger hasLayout and contain floats. */
+  *zoom: 1;
+  
+}
+
+/* ==========================================================================
+  Accessible Hiding: Hide from view, not from screenreaders
+========================================================================== */
+@mixin accessiblyhidden {
+  position: fixed;
+  left: -9999px;
+}
+
+/* ==========================================================================
+  Instant ::before ::after selectors
+========================================================================== */
+@mixin before-after {
+  content: '';
+  position: absolute;
+}
+
+/* ==========================================================================
+  Vertical Alignment: Vertically align items
+========================================================================== */
+@mixin vertical-align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ==========================================================================
+  Middle Alignment: Align items vertically and horizontally
+========================================================================== */
+@mixin middle-align {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ==========================================================================
+  In case we need to support < IE8
+========================================================================== */
+@mixin inline-block {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* ==========================================================================
+  Legacy Linear Greadients
+========================================================================== */
+@mixin linear-gradient($gradient, $fallback) {
+  background: $fallback;
+  background: $gradient;
+}
